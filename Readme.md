@@ -46,6 +46,3 @@ L'objectif principal est d'estimer la probabilité de défaut de paiement pour c
 
 ## Conclusion
 Le modèle développé montre une précision élevée et peut être utilisé pour prédire la probabilité de défaut de paiement pour de nouveaux clients. L'équation du modèle permet une intégration facile dans les systèmes de l'institution financière pour automatiser le calcul des scores de crédit.
-
-## Auteur
-Lamarana DIALLO
