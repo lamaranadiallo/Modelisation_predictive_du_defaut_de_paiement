@@ -33,14 +33,14 @@ L'objectif principal est d'estimer la probabilité de défaut de paiement pour c
    - Mesure de la précision sur l'échantillon de test
    - Sélection finale des variables avec validation croisée (RFECV)
 
-![Distribution de la variable défaut de paiement](imgs/corr_final.png)
+![Corrélation des variables sélectionnées](imgs/corr_final.png)
 
 ## Résultats clés
 - Précision du modèle sur les données de test : 97%
 - 9 variables sélectionnées pour le modèle final
 - Équation du modèle fournie pour le calcul du score et de la probabilité de défaut
 
-![Distribution de la variable défaut de paiement](imgs/select_var.jpeg)
+![Sélection de variables par validation croisée](imgs/select_var.jpeg)
 
 ## Conclusion
 Le modèle développé montre une précision élevée et peut être utilisé pour prédire la probabilité de défaut de paiement pour de nouveaux clients. L'équation du modèle permet une intégration facile dans les systèmes de l'institution financière pour automatiser le calcul des scores de crédit.
