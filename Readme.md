@@ -3,6 +3,8 @@
 ## Aperçu
 Ce projet vise à développer un modèle de Credit Scoring pour prédire la probabilité qu'un détenteur de carte de crédit ne parvienne pas à payer son solde dû dans un horizon de 12 mois. Le modèle utilise des données historiques et actuelles sur le comportement des clients pour estimer le risque de défaut de paiement.
 
+![Distribution de la variable défaut de paiement](imgs/defaut_paiement.jpeg)
+
 ## Objectif
 L'objectif principal est d'estimer la probabilité de défaut de paiement pour chaque client, permettant ainsi à l'institution financière de mieux gérer les risques associés aux cartes de crédit.
 
@@ -31,18 +33,14 @@ L'objectif principal est d'estimer la probabilité de défaut de paiement pour c
    - Mesure de la précision sur l'échantillon de test
    - Sélection finale des variables avec validation croisée (RFECV)
 
+![Distribution de la variable défaut de paiement](imgs/corr_final.png)
+
 ## Résultats clés
 - Précision du modèle sur les données de test : 97%
 - 9 variables sélectionnées pour le modèle final
 - Équation du modèle fournie pour le calcul du score et de la probabilité de défaut
 
-## Technologies utilisées
-- Python
-- Scikit-learn pour la modélisation et la sélection de variables
-- Bibliothèques de visualisation (non spécifiées dans le rapport)
-
-## Comment exécuter le code
-[Cette section serait à compléter avec des instructions spécifiques sur l'exécution du code, qui ne sont pas fournies dans le rapport PDF]
+![Distribution de la variable défaut de paiement](imgs/select_var.jpeg)
 
 ## Conclusion
 Le modèle développé montre une précision élevée et peut être utilisé pour prédire la probabilité de défaut de paiement pour de nouveaux clients. L'équation du modèle permet une intégration facile dans les systèmes de l'institution financière pour automatiser le calcul des scores de crédit.
