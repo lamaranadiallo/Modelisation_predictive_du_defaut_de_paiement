@@ -1,26 +1,51 @@
-## Introduction
-Le projet consiste à modéliser des données sur des détenteurs de cartes de crédit d’une institution
-financière Nord- Américaine. L’objectif principal de la modélisation consiste à estimer la probabilité
-qu’un détenteur d’une carte de crédit ne parvient pas à payer son solde dû (défaut de paiement)
-dans un futur horizon de 12 mois après la date de collecte des différentes caractéristiques du modèle.
-Un client est considéré être en défaut de paiement si l’une au moins des conditions suivantes
-est vérifiée pendant la période visée (12 mois après une date donnée qui a servi à collecter les
-variables):
-- Retard de paiement de 90 jours ou plus ;
-- Faillite
-- Radiation ;
-Il faut mentionner que c’est une modélisation d’une clientèle déjà détentrice de cartes de crédit
-(l’institution financière dispose assez d’informations en termes de comportement : ce sont les
-différentes variables décrivant cette clientèle). Ainsi, la modélisation consistera à prédire le comportement
-d’un détenteur dans un futur horizon de 12 mois en se basant sur son comportement
-actuel et passé. Le modèle résultant est donc un modèle comportemental qui permettra de suivre,
-dans le temps, le comportement des détenteurs de cartes de crédit en termes de capacités de
-remboursement du solde dû à la date exigée par l’institution financière.
+# Modélisation prédictive du défaut de paiement en gestion du risque de crédit
 
----
+## Aperçu
+Ce projet vise à développer un modèle de Credit Scoring pour prédire la probabilité qu'un détenteur de carte de crédit ne parvienne pas à payer son solde dû dans un horizon de 12 mois. Le modèle utilise des données historiques et actuelles sur le comportement des clients pour estimer le risque de défaut de paiement.
 
-The project involves modeling data on credit card holders from a North American financial institution. The main objective of the modeling is to estimate the probability that a credit card holder will fail to pay their outstanding balance (default) within a future 12-month horizon after collecting various model features. A customer is considered to be in default if at least one of the following conditions is met during the specified period (12 months after a given date used to collect the variables):
-- Payment delay of 90 days or more;
-- Bankruptcy
-- Removal;
-It should be mentioned that this is modeling of an existing credit card holder base (the financial institution has enough information in terms of behavior: these are the different variables describing this customer base). Thus, the modeling will involve predicting the behavior of a holder in a future 12-month horizon based on their current and past behavior. The resulting model is therefore a behavioral model that will track over time the behavior of credit card holders in terms of their ability to repay the outstanding balance by the date required by the financial institution.
+## Objectif
+L'objectif principal est d'estimer la probabilité de défaut de paiement pour chaque client, permettant ainsi à l'institution financière de mieux gérer les risques associés aux cartes de crédit.
+
+## Données utilisées
+- 24877 observations (détenteurs de cartes)
+- 33 variables (30 quantitatives, 3 qualitatives)
+- Variables incluent : montants des achats, soldes, paiements, ratios d'utilisation, retards de paiement, informations sociodémographiques, etc.
+- Horizon de prédiction : 12 mois après la date d'observation
+
+## Méthodologie
+1. Exploration et préparation des données
+   - Analyse des variables qualitatives et quantitatives
+   - Traitement des valeurs manquantes
+   - Sélection de variables basée sur l'analyse de corrélation
+
+2. Catégorisation des prédicteurs
+   - Regroupement des modalités pour les variables qualitatives
+   - Discrétisation des variables quantitatives
+
+3. Modélisation
+   - Utilisation de la régression logistique
+   - Échantillonnage : 70% pour l'apprentissage, 30% pour le test
+   - Estimation du modèle et sélection des variables finales
+
+4. Évaluation du modèle
+   - Mesure de la précision sur l'échantillon de test
+   - Sélection finale des variables avec validation croisée (RFECV)
+
+## Résultats clés
+- Précision du modèle sur les données de test : 97%
+- 9 variables sélectionnées pour le modèle final
+- Équation du modèle fournie pour le calcul du score et de la probabilité de défaut
+
+## Technologies utilisées
+- Python
+- Scikit-learn pour la modélisation et la sélection de variables
+- Bibliothèques de visualisation (non spécifiées dans le rapport)
+
+## Comment exécuter le code
+[Cette section serait à compléter avec des instructions spécifiques sur l'exécution du code, qui ne sont pas fournies dans le rapport PDF]
+
+## Conclusion
+Le modèle développé montre une précision élevée et peut être utilisé pour prédire la probabilité de défaut de paiement pour de nouveaux clients. L'équation du modèle permet une intégration facile dans les systèmes de l'institution financière pour automatiser le calcul des scores de crédit.
+
+## Auteur
+Lamarana DIALLO
